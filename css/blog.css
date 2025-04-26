@@ -32,7 +32,7 @@ code,kbd,pre,samp {
 
 @font-face {
     font-family: Operator Mono !important;
-    src: url(https://cdn.jsdmirror.com/gh/Innei/zshrc@0.1.0/webfont/OperatorMonoSSmLigNerdFontAAEOPSLMDI-Book.woff2) format("woff2"),url(hhttps://cdn.jsdmirror.com/gh/Innei/zshrc@0.1.0/webfont/OperatorMonoSSmLigNerdFontAAEOPSLMDI-Book.woff) format("woff") !important;
+    src: url(https://cdn.jsdmirror.com/gh/Innei/zshrc@0.1.0/webfont/OperatorMonoSSmLigNerdFontAAEOPSLMDI-Book.woff2) format("woff2"),url(https://cdn.jsdmirror.com/gh/Innei/zshrc@0.1.0/webfont/OperatorMonoSSmLigNerdFontAAEOPSLMDI-Book.woff) format("woff") !important;
     font-weight: 400;
     font-style: normal
 }
@@ -55,12 +55,12 @@ html[data-theme='dark'] [data-theme] {
     background-color: var(--fallback-b1, oklch(var(--b1) / 1));
 }
 html[data-theme='dark'].noise body::before {
-    background-image: url(https://img.xjh.me/random_img.php?type=bg&ctype=acg&return=302)!important;
+    background-image: url(https://www.loliapi.com/acg/)!important;
     opacity: 0.1;
     background-size: cover;
 }
 html[data-theme='light'].noise body::before {
-    background-image: url(https://img.xjh.me/random_img.php?type=bg&ctype=acg&return=302)!important;
+    background-image: url(https://www.loliapi.com/acg/)!important;
     opacity: 0.3;
     background-size: cover;
 }
