@@ -68,7 +68,7 @@ CookieConsent.run({
     }
 });
 
-window.addEventListener('cc:onFirstConsent', ({detail}) => {
+window.addEventListener('cc:onConsent', ({detail}) => {
   if (detail.cookie.categories.includes("analytics")) {
     window.clarity('consent');
   } else {
