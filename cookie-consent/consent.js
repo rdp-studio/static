@@ -84,10 +84,9 @@ window.addEventListener('cc:onChange', ({detail}) => {
   }
 });
 
-setInterval(() => {
-    document.querySelector('a[href="/cookies-pref"]').removeEventListener("click");
-    document.querySelector('a[href="/cookies-pref"]').addEventListener("click", (e) => {
-        e.preventDefault();
+window.addEventListener("hashchange", () => {
+    if (location.hash = "#sdk-cookies-pref") {
+        location.hash = "";
         CookieConsent.showPreferences();
-    });
-}, 200);
+    }
+});
