@@ -84,14 +84,24 @@ window.addEventListener('cc:onChange', ({detail}) => {
   }
 });
 
+const openConsentModal = (e) => {
+    e.preventDefault();
+    CookieConsent.showPreferences();
+};
+
+const observer = new MutationObserver((mutations) => {
+    mutations.forEach(() => {
+        const link = document.querySelector('a[href="#sdk-cookies-pref"]');
+        if (link && !link.dataset.listenerAttached) {
+            link.addEventListener("click", openConsentModal);
+            link.dataset.listenerAttached = "true";
+        }
+    });
+});
+
+observer.observe(document.body, { childList: true, subtree: true });
+
 setInterval(() => {
-    const openConsentModal = (e) => {
-        e.preventDefault();
-        CookieConsent.showPreferences();
-    };
-    document.querySelector('a[href="#sdk-cookies-pref"]').removeEventListener("click", openConsentModal);
-    document.querySelector('a[href="#sdk-cookies-pref"]').addEventListener("click", openConsentModal);
-    
     if (location.hash == "#sdk-cookies-pref") {
         location.hash = "";
         CookieConsent.showPreferences();
