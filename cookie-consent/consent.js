@@ -85,6 +85,10 @@ window.addEventListener('cc:onChange', ({detail}) => {
 });
 
 setInterval(() => {
+    const openConsentModal = () => CookieConsent.showPreferences();
+    document.querySelector('a[href="#sdk-cookies-pref"]').removeEventListener("click", openConsentModal);
+    document.querySelector('a[href="#sdk-cookies-pref"]').addEventListener("click", openConsentModal);
+    
     if (location.hash == "#sdk-cookies-pref") {
         location.hash = "";
         CookieConsent.showPreferences();
