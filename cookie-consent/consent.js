@@ -84,9 +84,9 @@ window.addEventListener('cc:onChange', ({detail}) => {
   }
 });
 
-window.addEventListener("hashchange", () => {
+setInterval(() => {
     if (location.hash == "#sdk-cookies-pref") {
         location.hash = "";
         CookieConsent.showPreferences();
     }
-});
+}, 200);
