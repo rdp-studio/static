@@ -48,12 +48,22 @@ body {
 }
 html[data-theme='dark'].themed body::before {
     content: '';
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
     background-image: url(https://www.loliapi.com/acg/)!important;
     opacity: 0.1;
     background-size: cover;
 }
 html[data-theme='light'].themed body::before {
     content: '';
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
     background-image: url(https://www.loliapi.com/acg/)!important;
     opacity: 0.3;
     background-size: cover;
