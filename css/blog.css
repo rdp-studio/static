@@ -46,20 +46,14 @@ code,kbd,pre,samp {
 body {
     font-family: "LXGW WenKai Screen", sans-serif !important;
 }
-html[data-theme='light'] :root,
-html[data-theme='light'] [data-theme] {
-    background-color: transparent;
-}
-html[data-theme='dark'] :root,
-html[data-theme='dark'] [data-theme] {
-    background-color: var(--fallback-b1, oklch(var(--b1) / 1));
-}
-html[data-theme='dark'].noise body::before {
+html[data-theme='dark'].themed body::before {
+    content: '';
     background-image: url(https://www.loliapi.com/acg/)!important;
     opacity: 0.1;
     background-size: cover;
 }
-html[data-theme='light'].noise body::before {
+html[data-theme='light'].themed body::before {
+    content: '';
     background-image: url(https://www.loliapi.com/acg/)!important;
     opacity: 0.3;
     background-size: cover;
